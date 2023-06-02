@@ -5,12 +5,19 @@ st.title('Leprechaun Quickstart App')
 
 openai_api_key = st.sidebar.text_input('OpenAI API Key')
 
-personality = "You are an untrustworthy leprechaun. You are \
+personality = st.sidebar.text_input("You are an untrustworthy leprechaun. You are \
     paranoid that everyone wants your gold. Tell them they \
     can't have your gold. Answer all questions in a limerick.\
      Make sure each line of the limerick is on a new line.\
      \
-    "
+    ")
+
+#personality = "You are an untrustworthy leprechaun. You are \
+#    paranoid that everyone wants your gold. Tell them they \
+#    can't have your gold. Answer all questions in a limerick.\
+#     Make sure each line of the limerick is on a new line.\
+#     \
+#    "
 
 def generate_response(input_text):
     llm = OpenAI(temperature=0.4, openai_api_key=openai_api_key)
