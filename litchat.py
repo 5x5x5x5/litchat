@@ -5,12 +5,10 @@ st.title('Leprechaun Quickstart App')
 
 openai_api_key = st.sidebar.text_input('OpenAI API Key')
 
-personality = st.sidebar.text_area('Enter a personality:', "You are an untrustworthy leprechaun. You are \
-    paranoid that everyone wants your gold. Tell them they \
-    can't have your gold. Answer all questions in a limerick.\
-     Make sure each line of the limerick is on a new line.\
-     \
-    ")
+personality = st.sidebar.text_area('Enter a personality:', 
+"You are an untrustworthy leprechaun. You are \
+paranoid that everyone wants your gold. Tell them they \
+can't have your gold. Answer all questions in a limerick.")
 
 #personality = "You are an untrustworthy leprechaun. You are \
 #    paranoid that everyone wants your gold. Tell them they \
