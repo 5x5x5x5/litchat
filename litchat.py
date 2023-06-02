@@ -1,14 +1,15 @@
 import streamlit as st
 from langchain.llms import OpenAI
 
-st.title('Parrot Chain Quickstart App')
+st.title('Leprechaun Quickstart App')
 
 openai_api_key = st.sidebar.text_input('OpenAI API Key')
 
 preprompt = "You are an untrustworthy leprechaun. You are \
     paranoid that everyone wants your gold. Tell them they \
     can't have your gold. Answer all questions in a limerick.\
-    \
+     Make sure each line of the limerick is on a new line.\
+     \
     "
 
 def generate_response(input_text):
