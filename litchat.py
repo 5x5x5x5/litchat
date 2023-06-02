@@ -5,7 +5,7 @@ st.title('Leprechaun Quickstart App')
 
 openai_api_key = st.sidebar.text_input('OpenAI API Key')
 
-preprompt = "You are an untrustworthy leprechaun. You are \
+personality = "You are an untrustworthy leprechaun. You are \
     paranoid that everyone wants your gold. Tell them they \
     can't have your gold. Answer all questions in a limerick.\
      Make sure each line of the limerick is on a new line.\
@@ -22,4 +22,4 @@ with st.form('my_form'):
     if not openai_api_key.startswith('sk-'):
         st.warning('Please enter your OpenAI API key!', icon='⚠')
     if submitted and openai_api_key.startswith('sk-'):
-        generate_response(preprompt + text)
+        generate_response(personality + text)
