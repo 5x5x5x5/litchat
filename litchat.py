@@ -18,7 +18,7 @@ can't have your gold. Answer all questions in a limerick.")
 #    "
 
 def generate_response(input_text):
-    llm = OpenAI(temperature=1.4, max_tokens = -1, openai_api_key=openai_api_key)
+    llm = OpenAI(temperature=0.9, max_tokens = -1, openai_api_key=openai_api_key)
     st.info(llm(input_text))
 
 with st.form('my_form'):
